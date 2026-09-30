@@ -1,20 +1,32 @@
 # Sentuh — Documentation Index
 
-This folder is the project **source of truth** for product and implementation decisions. Update documents as decisions change; do not keep conflicting parallel specifications in chat and the repo.
+Folder ini adalah **source of truth** untuk keputusan produk, arsitektur, pengujian, dan progres SENTUH. Jangan mempertahankan spesifikasi yang saling bertentangan antara chat, repo, dan dokumen.
 
 | File | Purpose |
 |---|---|
-| `01_PROJECT_BRIEF.md` | Purpose, scope, constraints, stakeholders and deadline |
-| `02_PRD.md` | MVP requirements, user journeys and acceptance criteria |
-| `03_ARCHITECTURE.md` | High-level stack, application flow and data model |
-| `04_DESIGN_SYSTEM.md` | UI/UX direction and content guidance |
-| `05_DEVELOPMENT_WORKFLOW.md` | Branches, implementation rhythm, commands and code quality |
-| `06_TEST_PLAN.md` | Functional, security, QR/NFC and presentation tests |
-| `07_DEPLOYMENT_PLAN.md` | Local-to-online release strategy and known risks |
-| `08_DECISIONS.md` | Lightweight architecture decision log |
-| `09_PROGRESS.md` | Milestones, owners, next task and blockers |
-| `10_AI_COLLABORATION.md` | How to work with an AI project assistant |
+| `01_PROJECT_BRIEF.md` | Tujuan, scope, batas anggaran/tenggat, dan deliverable |
+| `02_PRD.md` | Kebutuhan MVP, user journey, acceptance criteria, Definition of Done |
+| `03_ARCHITECTURE.md` | Stack, application flow, data model, dan implementasi arsitektur aktual |
+| `04_DESIGN_SYSTEM.md` | Arah UI/UX dan status penerapan visual |
+| `05_DEVELOPMENT_WORKFLOW.md` | Ritme milestone, Git, quality routine, dan aturan perubahan |
+| `06_TEST_PLAN.md` | Checklist functional/security/QR/NFC/deployment dan bukti test |
+| `07_DEPLOYMENT_PLAN.md` | Strategi kandidat local-to-online dan risiko deployment |
+| `08_DECISIONS.md` | Living log keputusan teknis/produk dan isu keputusan pending |
+| `09_PROGRESS.md` | Status aktual, gap, milestone aktif, dan urutan berikutnya |
+| `10_AI_COLLABORATION.md` | Kontrak kerja dengan AI assistant |
 
-`../AGENTS.md` is at the **project root**, since tools that recognize AGENTS.md typically discover it there. The `docs` folder holds the detailed specifications and workflows.
+`../AGENTS.md` tetap berada di **project root** supaya coding tools yang mengenali `AGENTS.md` dapat menemukannya. Detail spesifikasi berada di `docs/`.
 
-**Status:** Starter documents / living drafts. No claim that deployment, GitHub integration, database or NFC has been completed yet.
+## Status sinkronisasi — 30 September 2026
+
+Audit terhadap archive proyek aktual menemukan implementasi lebih maju daripada catatan 27–28 September. Saat ini:
+
+- CRUD bisnis, business links, dan devices sudah ada; sejumlah skenario mempunyai bukti manual;
+- redesign login admin sudah ada dan pernah diuji desktop/emulator mobile;
+- Dashboard Overview tahap awal sudah ada dengan KPI berbasis data yang tersedia dan empty state untuk analytics;
+- Universal Business Page, stable device redirect, serta generator/aksi QR sudah ada di kode tetapi belum mempunyai pengujian end-to-end lengkap;
+- landing page SENTUH, `scan_events`, deployment, persistent production storage, physical QR/NFC test, dan curated FAQ belum selesai;
+- subsystem Penjualan/Kas/Laporan Keuangan terdeteksi pada implementasi tetapi belum disahkan sebagai scope PRD, sehingga pengembangannya dibekukan sementara;
+- baseline Git belum aman karena banyak perubahan setelah commit `6b626b1` belum di-commit/push.
+
+Status paling rinci selalu mengacu ke `09_PROGRESS.md`; bukti dan checklist mengacu ke `06_TEST_PLAN.md`. Target/requirements tetap mengacu ke `02_PRD.md` dan tidak boleh dianggap selesai hanya karena kode tersedia.

@@ -6,14 +6,31 @@
 - Both: physical prototype, phone tests, product photography and presentation rehearsal.
 
 ## Build order
-A. Local Laravel running (reported working; capture version and commit state next).
-B. Initialize repository and docs; choose confirmed Laravel/Filament dependency versions.
-C. Database migrations and Filament auth + CRUD (business + links + device).
-D. Reusable mobile business page and stable redirect route.
-E. QR generator; scan test; deploy test instance and verify stable URL.
-F. Print a single acrylic; write/tag NFC; test on real phone.
-G. Landing-page FAQ chat widget; optional metrics if time permits.
-H. Finalize proposal, report, financial calculations and PPT.
+
+A. Verify the existing Laravel environment, Git status,
+   and project documentation.
+
+B. Finalize database architecture and migrations.
+
+C. Implement Filament business, link, and device CRUD.
+
+D. Build Dashboard Overview with actual available
+   statistics and empty states for unavailable data.
+
+E. Implement the reusable mobile-first business page,
+   stable device redirects, and QR generation.
+
+F. Deploy the application, build the physical acrylic
+   prototype, and test QR/NFC on real phones.
+
+G. Implement basic QR/NFC access tracking and
+   activate the dashboard chart using actual data.
+
+H. Implement the curated FAQ chatbot with optional
+   WhatsApp handoff.
+
+I. Finalize the proposal, report, financial
+   calculations, and presentation.
 
 ## Git workflow
 - Start with a `.gitignore` appropriate to Laravel; never stage `.env`, tokens or secret keys.

@@ -1,0 +1,1238 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+
+/* ==================================
+   SENTUH — Midnight Blue Sidebar
+   ================================== */
+
+/* Latar sidebar dan header */
+.fi-sidebar,
+.fi-sidebar-header,
+.fi-sidebar-nav {
+    background-color: #10233F !important;
+}
+
+/* Identitas merek */
+.fi-sidebar-header .fi-logo {
+    color: #FFFFFF !important;
+}
+
+/* Teks dan ikon navigasi */
+.fi-sidebar .fi-sidebar-item-label,
+.fi-sidebar .fi-sidebar-item-icon,
+.fi-sidebar .fi-sidebar-group-label {
+    color: #E2E8F0 !important;
+}
+
+/* Navigasi aktif */
+.fi-sidebar .fi-sidebar-item.fi-active > .fi-sidebar-item-btn,
+.fi-sidebar .fi-sidebar-item.fi-active > .fi-sidebar-item-btn:hover {
+    background-color: #2563EB !important;
+    border-radius: 10px;
+}
+
+/* Teks dan ikon navigasi aktif */
+.fi-sidebar .fi-sidebar-item.fi-active
+> .fi-sidebar-item-btn > .fi-sidebar-item-label,
+.fi-sidebar .fi-sidebar-item.fi-active
+> .fi-sidebar-item-btn > .fi-icon {
+    color: #FFFFFF !important;
+}
+
+/* Efek hover navigasi tidak aktif */
+.fi-sidebar .fi-sidebar-item:not(.fi-active)
+> .fi-sidebar-item-btn:hover {
+    background-color: #1C3657 !important;
+    border-radius: 10px;
+}
+
+/* ==================================
+   SENTUH — Workspace
+   ================================== */
+
+.fi-main-ctn {
+    background-color: #F7F8FA !important;
+}
+
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+@layer components {
+    .sentuh-hero {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+        gap: 1.5rem;
+        align-items: center;
+        padding: 1.75rem 1.9rem;
+        border-radius: 1.5rem;
+        background:
+            radial-gradient(circle at top right, rgba(147, 197, 253, 0.28), transparent 24rem),
+            linear-gradient(135deg, #10233f 0%, #173665 60%, #1d4ed8 100%);
+        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+    }
+
+    .sentuh-hero__content {
+        position: relative;
+        z-index: 1;
+        max-width: 40rem;
+    }
+
+    .sentuh-hero__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 0.9rem;
+        padding: 0.4rem 0.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        color: #dbeafe;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+    }
+
+    .sentuh-hero__title {
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(2rem, 3vw, 2.85rem);
+        line-height: 1.08;
+        font-weight: 800;
+    }
+
+    .sentuh-hero__description {
+        margin-top: 1rem;
+        max-width: 34rem;
+        color: #d6e3ff;
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .sentuh-hero__actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.9rem 1rem;
+        margin-top: 1.4rem;
+    }
+
+    .sentuh-hero__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2.9rem;
+        padding: 0.8rem 1.15rem;
+        border-radius: 0.95rem;
+        background: #ffffff;
+        color: #10233f;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
+        transition: 0.2s ease;
+    }
+
+    .sentuh-hero__button:hover {
+        background: #eff6ff;
+        color: #10233f;
+    }
+
+    .sentuh-hero__note {
+        margin: 0;
+        color: #c7d7f7;
+        font-size: 0.875rem;
+        line-height: 1.6;
+    }
+
+    .sentuh-hero__visual {
+        position: relative;
+        min-height: 18rem;
+    }
+
+    .sentuh-hero__halo {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 14rem;
+        height: 14rem;
+        border-radius: 999px;
+        background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.42) 0%,
+            rgba(255, 255, 255, 0.12) 40%,
+            transparent 72%
+        );
+        filter: blur(4px);
+    }
+
+    .sentuh-hero__platform {
+        position: absolute;
+        bottom: 1.2rem;
+        left: 50%;
+        width: 15rem;
+        height: 2.6rem;
+        transform: translateX(-40%) skewX(-24deg);
+        border-radius: 1rem;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.08));
+        box-shadow: 0 18px 40px rgba(2, 6, 23, 0.25);
+    }
+
+    .sentuh-hero__device {
+        position: absolute;
+        top: 0.5rem;
+        right: 3.5rem;
+        width: 12rem;
+        height: 18rem;
+        padding: 1rem;
+        border-radius: 1.8rem;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.44));
+        border: 1px solid rgba(255, 255, 255, 0.58);
+        backdrop-filter: blur(10px);
+        box-shadow:
+            0 28px 55px rgba(2, 6, 23, 0.24),
+            inset 0 1px 0 rgba(255, 255, 255, 0.65);
+        transform: rotate(-12deg);
+    }
+
+    .sentuh-hero__device::before {
+        content: '';
+        position: absolute;
+        inset: 0.55rem;
+        border-radius: 1.35rem;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .sentuh-hero__device-brand {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.45rem;
+        margin-bottom: 1.4rem;
+        color: #10233f;
+        font-size: 1.45rem;
+        font-weight: 800;
+        text-align: center;
+        letter-spacing: -0.02em;
+    }
+
+    .sentuh-hero__device-brand span {
+        color: #2563eb;
+    }
+
+    .sentuh-hero__qr {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 0.22rem;
+        width: 5.6rem;
+        margin: 0 auto 1.35rem;
+        padding: 0.45rem;
+        border-radius: 0.9rem;
+        background: rgba(15, 23, 42, 0.06);
+    }
+
+    .sentuh-hero__qr span {
+        aspect-ratio: 1 / 1;
+        border-radius: 0.14rem;
+        background: rgba(15, 23, 42, 0.1);
+    }
+
+    .sentuh-hero__qr span.is-filled {
+        background: #10233f;
+    }
+
+    .sentuh-hero__nfc {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 0.28rem;
+        margin-top: 0.7rem;
+    }
+
+    .sentuh-hero__nfc span {
+        display: block;
+        width: 0.7rem;
+        border: 2px solid #10233f;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-radius: 0 0 1rem 0;
+        transform: rotate(45deg);
+    }
+
+    .sentuh-hero__nfc span:nth-child(1) {
+        height: 0.7rem;
+        opacity: 0.45;
+    }
+
+    .sentuh-hero__nfc span:nth-child(2) {
+        height: 1rem;
+        opacity: 0.72;
+    }
+
+    .sentuh-hero__nfc span:nth-child(3) {
+        height: 1.3rem;
+    }
+
+    @media (max-width: 960px) {
+        .sentuh-hero {
+            grid-template-columns: 1fr;
+            padding: 1.5rem;
+        }
+
+        .sentuh-hero__visual {
+            order: -1;
+            min-height: 13.5rem;
+        }
+
+        .sentuh-hero__device {
+            top: 0.2rem;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%) rotate(-8deg);
+        }
+
+        .sentuh-hero__platform {
+            left: 50%;
+            transform: translateX(-50%) skewX(-24deg);
+        }
+
+        .sentuh-hero__content {
+            max-width: none;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .sentuh-hero {
+            padding: 1.25rem;
+            border-radius: 1.2rem;
+        }
+
+        .sentuh-hero__title {
+            font-size: 1.95rem;
+        }
+
+        .sentuh-hero__description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .sentuh-hero__actions {
+            align-items: stretch;
+        }
+
+        .sentuh-hero__button {
+            width: 100%;
+        }
+
+        .sentuh-hero__visual {
+            min-height: 12rem;
+        }
+
+        .sentuh-hero__device {
+            width: 9.6rem;
+            height: 14.4rem;
+            padding: 0.85rem;
+        }
+
+        .sentuh-hero__device-brand {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .sentuh-hero__qr {
+            width: 4.7rem;
+        }
+
+        .sentuh-hero__platform {
+            width: 12rem;
+            height: 2rem;
+        }
+
+        .sentuh-hero__halo {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+
+    /* SENTUH — Hero desktop yang lebih ringkas */
+@layer components {
+    @media (min-width: 961px) {
+        .sentuh-hero {
+            padding: 1.25rem 1.5rem;
+        }
+
+        .sentuh-hero__title {
+            font-size: clamp(1.7rem, 2.2vw, 2.1rem);
+        }
+
+        .sentuh-hero__description {
+            margin-top: 0.65rem;
+            line-height: 1.5;
+        }
+
+        .sentuh-hero__actions {
+            margin-top: 0.9rem;
+        }
+
+        .sentuh-hero__visual {
+            min-height: 13.5rem;
+        }
+
+        .sentuh-hero__device {
+            top: 0;
+            right: 2rem;
+            width: 9.5rem;
+            height: 13.5rem;
+            padding: 0.75rem;
+        }
+
+        .sentuh-hero__device-brand {
+            font-size: 1.1rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .sentuh-hero__qr {
+            width: 4.4rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .sentuh-hero__nfc {
+            margin-top: 0.35rem;
+        }
+    }
+}
+
+/* ====================================
+   SENTUH — Layered Premium Stat Cards
+   ==================================== */
+
+@layer components {
+    .fi-wi-stats-overview-stat.sentuh-stat {
+        min-height: 164px;
+        padding: 20px !important;
+        border: 1px solid #dce5f0;
+        border-radius: 18px;
+        background: #ffffff !important;
+        box-shadow: 0 4px 18px rgba(16, 35, 63, 0.04);
+    }
+
+    /* Variasi warna permukaan */
+    .fi-wi-stats-overview-stat.sentuh-stat--business {
+        background: #e9f1ff !important;
+        border-color: #cdddf6;
+    }
+
+    .fi-wi-stats-overview-stat.sentuh-stat--pending {
+        background: #f0f3f9 !important;
+    }
+
+    /* Ikon statistik: ukuran gambar tetap 20px */
+.sentuh-stat .fi-wi-stats-overview-stat-label-ctn .fi-icon {
+    order: 2;
+    flex-shrink: 0;
+
+    width: 20px !important;
+    height: 20px !important;
+    padding: 0 !important;
+    margin: 10px;
+
+    color: #2563eb !important;
+    background: transparent !important;
+    box-shadow: 0 0 0 10px #e9f1ff;
+    border-radius: 4px;
+}
+
+/* Total Bisnis */
+.sentuh-stat--business
+.fi-wi-stats-overview-stat-label-ctn .fi-icon {
+    box-shadow: 0 0 0 10px #d5e4ff;
+}
+
+/* Halaman Terbit */
+.sentuh-stat--published
+.fi-wi-stats-overview-stat-label-ctn .fi-icon {
+    color: #15803d !important;
+    box-shadow: 0 0 0 10px #e6f6f0;
+}
+
+/* Total Akses */
+.sentuh-stat--pending
+.fi-wi-stats-overview-stat-label-ctn .fi-icon {
+    color: #51698b !important;
+    box-shadow: 0 0 0 10px #dee6f2;
+}
+
+    .sentuh-stat .fi-wi-stats-overview-stat-description {
+        color: #64748b !important;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 640px) {
+        .fi-wi-stats-overview-stat.sentuh-stat {
+            min-height: 140px;
+            padding: 16px !important;
+        }
+    }
+}
+
+/* SENTUH — Layered Premium Empty States */
+
+@layer components {
+    .sentuh-empty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        min-height: 220px;
+        width: 100%;
+        padding: 24px 18px;
+        border: 1px dashed #dbe6f5;
+        border-radius: 16px;
+        background: #f0f5fd;
+        text-align: center;
+    }
+
+    .sentuh-empty--activity {
+        border-color: #e2e8f0;
+        background: #f8fafd;
+    }
+
+    .sentuh-empty__icon-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 12px;
+        border-radius: 14px;
+        background: #dfeafe;
+    }
+
+    .sentuh-empty--activity .sentuh-empty__icon-wrap {
+        background: #e9eef5;
+    }
+
+    .sentuh-empty__icon {
+        display: block;
+        width: 24px !important;
+        height: 24px !important;
+        padding: 0 !important;
+        color: #2563eb;
+    }
+
+    .sentuh-empty--activity .sentuh-empty__icon {
+        color: #526582;
+    }
+
+    .sentuh-empty__badge {
+        margin-bottom: 10px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: #e1eaff;
+        color: #315ca2;
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    .sentuh-empty--activity .sentuh-empty__badge {
+        background: #e9eef5;
+        color: #526582;
+    }
+
+    .sentuh-empty__title {
+        margin-bottom: 6px;
+        color: #10233f;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    .sentuh-empty__description {
+        max-width: 350px;
+        margin: 0;
+        color: #64748b;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+        .sentuh-empty {
+            min-height: 190px;
+            padding: 20px 14px;
+        }
+    }
+}
+
+/* SENTUH — Recent Businesses Table */
+
+@layer components {
+    tr.sentuh-business-row > td {
+        padding-top: 0.85rem !important;
+        padding-bottom: 0.85rem !important;
+        transition: background-color 0.2s ease;
+    }
+
+    tr.sentuh-business-row:hover > td {
+        background-color: #F0F5FD !important;
+    }
+
+    .sentuh-business-row .fi-badge {
+        font-weight: 600;
+        border-radius: 8px;
+    }
+}
+
+/* =========================================
+   SENTUH — Business Management Header
+   ========================================= */
+
+@layer components {
+    .sentuh-business-header {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        width: 100%;
+        padding: 32px 28px 24px;
+        border: 1px solid #dce8fb;
+        border-radius: 22px;
+        background:
+            radial-gradient(
+                circle at 90% 20%,
+                #c9ddff 0,
+                transparent 35%
+            ),
+            #f0f6ff;
+    }
+
+    .sentuh-business-header__intro {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 190px;
+    }
+
+    .sentuh-business-header__text {
+        position: relative;
+        z-index: 2;
+        max-width: 65%;
+    }
+
+    .sentuh-business-header__eyebrow {
+        display: block;
+        margin-bottom: 12px;
+        color: #2563eb;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+    }
+
+    .sentuh-business-header__text h1 {
+        margin: 0;
+        color: #10233f;
+        font-size: clamp(28px, 3vw, 38px);
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    .sentuh-business-header__text p {
+        max-width: 520px;
+        margin-top: 12px;
+        color: #526582;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* Ilustrasi acrylic */
+    .sentuh-business-header__art {
+        position: absolute;
+        top: -24px;
+        right: 45px;
+        width: 260px;
+        height: 230px;
+        pointer-events: none;
+    }
+
+    .sentuh-business-header__circle {
+        position: absolute;
+        top: 25px;
+        right: -30px;
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        background: #d7e7ff;
+    }
+
+    .sentuh-business-header__device {
+        position: absolute;
+        top: 12px;
+        right: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 145px;
+        height: 205px;
+        padding: 22px;
+        border: 3px solid #ffffff;
+        border-radius: 20px;
+        background: linear-gradient(
+            150deg,
+            #ffffff,
+            #d8e6fb
+        );
+        box-shadow: 0 18px 35px rgba(37, 99, 235, 0.18);
+        transform: rotate(-12deg);
+    }
+
+    .sentuh-business-header__brand {
+        color: #10233f;
+        font-size: 23px;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+
+    .sentuh-business-header__brand span {
+        color: #2563eb;
+    }
+
+    .sentuh-business-header__qr {
+        width: 75px;
+        height: 75px;
+        margin-top: 14px;
+        color: #10233f;
+    }
+
+    .sentuh-business-header__nfc {
+        width: 25px;
+        height: 25px;
+        margin-top: 12px;
+        color: #2563eb;
+    }
+
+    /* Kartu informasi dan CTA */
+    .sentuh-business-header__bottom {
+        position: relative;
+        z-index: 3;
+        display: grid;
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr)) auto;
+        align-items: stretch;
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .sentuh-business-header__feature {
+        display: flex;
+        align-items: center;
+        min-width: 0;
+        gap: 12px;
+        padding: 14px;
+        border: 1px solid #ffffff;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.94);
+    }
+
+    .sentuh-business-header__feature-icon {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+    }
+
+    .sentuh-business-header__feature-icon svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    .sentuh-business-header__feature-icon.is-blue {
+        background: #e4efff;
+        color: #2563eb;
+    }
+
+    .sentuh-business-header__feature-icon.is-green {
+        background: #e1f6ef;
+        color: #15803d;
+    }
+
+    .sentuh-business-header__feature-icon.is-purple {
+        background: #ecebff;
+        color: #5551b8;
+    }
+
+    .sentuh-business-header__feature strong,
+    .sentuh-business-header__feature span {
+        display: block;
+    }
+
+    .sentuh-business-header__feature strong {
+        color: #10233f;
+        font-size: 13px;
+    }
+
+    .sentuh-business-header__feature span {
+        margin-top: 4px;
+        color: #64748b;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .sentuh-business-header__create {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 60px;
+        padding: 12px 20px;
+        border-radius: 14px;
+        background: #2563eb;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background-color 0.2s;
+    }
+
+    .sentuh-business-header__create:hover {
+        background: #1d4ed8;
+        color: #ffffff;
+    }
+
+    .sentuh-business-header__create svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    @media (max-width: 1200px) {
+        .sentuh-business-header__bottom {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 768px) {
+        .sentuh-business-header {
+            padding: 24px 18px;
+        }
+
+        .sentuh-business-header__intro {
+            min-height: 0;
+        }
+
+        .sentuh-business-header__text {
+            max-width: 100%;
+        }
+
+        .sentuh-business-header__art {
+            display: none;
+        }
+
+        .sentuh-business-header__bottom {
+            grid-template-columns: 1fr;
+            margin-top: 24px;
+        }
+
+        .sentuh-business-header__create {
+            min-height: 48px;
+        }
+    }
+}
+
+/* SENTUH — Tabel Manajemen Bisnis */
+
+@layer components {
+    tr.sentuh-business-row > td {
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+        transition: background-color 0.2s ease;
+    }
+
+    tr.sentuh-business-row:hover > td {
+        background-color: #f0f5fd !important;
+    }
+
+    tr.sentuh-business-row .fi-badge {
+        border-radius: 9px;
+        font-weight: 600;
+    }
+}
+/* SENTUH — Posisi header dan pencarian tabel Bisnis */
+
+@media (min-width: 769px) {
+    .fi-ta-header-ctn:has(> .sentuh-business-table-header) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 20px 24px;
+    }
+
+    .fi-ta-header-ctn:has(> .sentuh-business-table-header)
+    > .fi-ta-header-toolbar {
+        width: auto !important;
+        min-width: 290px;
+        margin-left: auto;
+        padding: 0 !important;
+        border: 0 !important;
+    }
+}
+
+/* =====================================
+   SENTUH — Business Form Sections
+   ===================================== */
+
+@layer components {
+    .sentuh-business-form-section {
+        overflow: hidden;
+        border: 1px solid #dce7f5 !important;
+        border-radius: 18px !important;
+        background: #ffffff !important;
+        box-shadow: 0 6px 24px rgba(16, 35, 63, 0.04);
+    }
+
+    /* Header section */
+    .sentuh-business-form-section
+    :is(.fi-sc-section-header, .fi-section-header) {
+        padding: 20px 24px !important;
+        border-bottom: 1px solid #dce7f5;
+        background: #f0f5ff;
+    }
+
+    /* Judul section */
+    .sentuh-business-form-section
+    :is(.fi-sc-section-header-heading, .fi-section-header-heading) {
+        color: #10233f;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    /* Ikon section */
+    .sentuh-business-form-section
+    :is(.fi-sc-section-header-icon, .fi-section-header-icon) {
+        color: #2563eb;
+    }
+
+    @media (max-width: 640px) {
+        .sentuh-business-form-section
+        :is(.fi-sc-section-header, .fi-section-header) {
+            padding: 16px !important;
+        }
+    }
+}
+
+/* ==================================
+   SENTUH — Business Edit Page Header
+   ================================== */
+
+@layer components {
+    .sentuh-business-edit-page .fi-header {
+        padding: 24px 28px;
+        border: 1px solid #d5e4fa;
+        border-radius: 20px;
+        background: #edf4ff;
+        box-shadow: 0 4px 18px rgba(16, 35, 63, 0.04);
+    }
+
+    .sentuh-edit-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sentuh-edit-eyebrow {
+        color: #2563eb;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+    }
+
+    .sentuh-edit-heading-main {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .sentuh-edit-title {
+        color: #10233f;
+        font-size: clamp(24px, 2.5vw, 32px);
+        font-weight: 800;
+        line-height: 1.25;
+    }
+
+    .sentuh-edit-status {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .sentuh-edit-status.is-published {
+        background: #dcfce7;
+        color: #166534;
+    }
+
+    .sentuh-edit-status.is-draft {
+        background: #e2e8f0;
+        color: #475569;
+    }
+
+    @media (max-width: 640px) {
+        .sentuh-business-edit-page .fi-header {
+            padding: 20px 16px;
+        }
+    }
+}
+/* SENTUH — Header Manajemen Perangkat */
+
+@layer components {
+    .sentuh-devices-header {
+        background:
+            radial-gradient(
+                circle at 90% 20%,
+                #c7dcff 0,
+                transparent 35%
+            ),
+            #edf3ff;
+    }
+
+    .sentuh-devices-header
+    .sentuh-business-header__circle {
+        background: #c9dcff;
+    }
+
+    .sentuh-devices-header
+    .sentuh-business-header__device {
+        transform: rotate(9deg);
+        box-shadow:
+            0 18px 35px rgba(37, 99, 235, 0.16);
+    }
+}
+/* SENTUH — Penyelarasan tabel Perangkat */
+
+@media (min-width: 1280px) {
+    .fi-ta-header-ctn:has(> .sentuh-devices-table-header) {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap !important;
+        gap: 16px;
+        padding: 20px 24px;
+    }
+
+    .fi-ta-header-ctn > .sentuh-devices-table-header {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .sentuh-devices-table-header > div:last-child {
+        min-width: 0;
+    }
+
+    .fi-ta-header-ctn:has(> .sentuh-devices-table-header)
+    > .fi-ta-header-toolbar {
+        flex: 0 0 300px;
+        width: 300px !important;
+        min-width: 0;
+        margin-left: auto;
+        padding: 0 !important;
+        border: 0 !important;
+    }
+}
+/* SENTUH — Header Edit Perangkat */
+
+@layer components {
+    .sentuh-device-edit-page .fi-header,
+.sentuh-device-create-page .fi-header {
+        padding: 24px 28px;
+        border: 1px solid #d5e4fa;
+        border-radius: 20px;
+        background: #edf4ff;
+        box-shadow: 0 4px 18px rgba(16, 35, 63, 0.04);
+    }
+
+    .sentuh-edit-status.is-active {
+        background: #dcfce7;
+        color: #166534;
+    }
+
+    .sentuh-edit-status.is-inactive {
+        background: #e2e8f0;
+        color: #475569;
+    }
+
+    @media (max-width: 640px) {
+        .sentuh-device-edit-page .fi-header,
+.sentuh-device-create-page .fi-header {
+            padding: 20px 16px;
+        }
+    }
+}
+/* SENTUH — Penjualan */
+
+.sentuh-sales-table-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.sentuh-sales-table-header__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.sentuh-sales-table-header__text strong {
+    color: #10233f;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sentuh-sales-table-header__text span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (min-width: 1280px) {
+    .fi-ta-header-ctn:has(> .sentuh-sales-table-header) {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap !important;
+        gap: 16px;
+        padding: 20px 24px;
+    }
+
+    .fi-ta-header-ctn:has(> .sentuh-sales-table-header)
+    > .fi-ta-header-toolbar {
+        flex: 0 0 320px;
+        width: 320px !important;
+        min-width: 0;
+        margin-left: auto;
+        padding: 0 !important;
+        border: 0 !important;
+    }
+}
+/* SENTUH — Formulir Penjualan */
+
+.sentuh-sales-create-page .fi-header,
+.sentuh-sales-edit-page .fi-header {
+    padding: 24px 28px;
+    border: 1px solid #d5e4fa;
+    border-radius: 20px;
+    background: #edf4ff;
+    box-shadow: 0 4px 18px rgba(16, 35, 63, 0.04);
+}
+
+/* Badge status pesanan */
+
+.sentuh-sales-status {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.sentuh-sales-status.is-draft {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.sentuh-sales-status.is-confirmed {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.sentuh-sales-status.is-completed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.sentuh-sales-status.is-cancelled {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.sentuh-sales-status.is-unknown {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+@media (max-width: 640px) {
+    .sentuh-sales-create-page .fi-header,
+    .sentuh-sales-edit-page .fi-header {
+        padding: 20px 16px;
+    }
+
+    .sentuh-sales-edit-page .sentuh-edit-heading-main {
+        flex-wrap: wrap;
+    }
+}
+
+/* SENTUH — Tabel Rekening Kas */
+
+.sentuh-cash-table-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.sentuh-cash-table-header__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.sentuh-cash-table-header__text strong {
+    color: #10233f;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sentuh-cash-table-header__text span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (min-width: 1280px) {
+    .fi-ta-header-ctn:has(> .sentuh-cash-table-header) {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap !important;
+        gap: 16px;
+        padding: 20px 24px;
+    }
+
+    .fi-ta-header-ctn:has(> .sentuh-cash-table-header)
+    > .fi-ta-header-toolbar {
+        flex: 0 0 300px;
+        width: 300px !important;
+        min-width: 0;
+        margin-left: auto;
+        padding: 0 !important;
+        border: 0 !important;
+    }
+}
+}

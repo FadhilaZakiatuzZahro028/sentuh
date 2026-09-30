@@ -13,7 +13,14 @@ Read `docs/README.md` first, then relevant documents before proposing changes. W
 5. Every customer-facing call-to-action must work on mobile. Keep visual quality intentional: no generic gradients, decorative dashboards, stock-style AI copy, inconsistent cards or excessive animation.
 6. Never commit `.env`, credentials, tokens, phone numbers obtained privately, or customer-only information. Validate inputs, protect admin routes, and never expose write access to the public.
 7. Avoid fabricated business results. Demo/fictitious sales and sample customers must be visibly labeled as simulations in academic deliverables.
-8. Prioritize a working demo and physical acrylic prototype over optional analytics. Do not present QR clicks as actual Google reviews.
+8. Prioritize a working QR/NFC demo and physical
+acrylic prototype over advanced analytics.
+Dashboard Overview is required. Build its layout
+early, but use real system data or empty states.
+Implement basic QR/NFC access tracking and
+activate its chart after the core QR/NFC flow
+works, before implementing the curated FAQ chatbot.
+Never present QR clicks as actual Google reviews.
 
 ## Coding rules
 - Follow existing Laravel conventions, framework version and repository style. Verify versions before adding dependencies.
@@ -35,4 +42,17 @@ Read `docs/README.md` first, then relevant documents before proposing changes. W
 - Update `docs/08_DECISIONS.md` for meaningful architectural changes, `docs/09_PROGRESS.md` after milestones, and `docs/06_TEST_PLAN.md` as checks are added.
 
 ## Priority order
-Working local Laravel → admin + database → generic business page → QR redirects → deployment → physical NFC prototype → FAQ chatbot → optional click analytics.
+
+1. Finalize documentation and database structure.
+2. Implement business, link, and device CRUD.
+3. Build Dashboard Overview with real available
+   statistics and empty states for unavailable data.
+4. Implement the reusable mobile-first business page.
+5. Implement stable QR/NFC redirects and QR generation.
+6. Complete deployment and test the physical prototype.
+7. Implement basic QR/NFC access tracking and activate
+   the chart using actual recorded data.
+8. Implement the curated FAQ chatbot with optional
+   WhatsApp handoff.
+
+Advanced analytics remain outside the MVP scope.
